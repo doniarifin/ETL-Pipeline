@@ -1,6 +1,6 @@
 import mysql.connector
 
-def load_data(data, var: dict[str][str]) -> None:
+def load_data(data, var: dict[str, str]) -> None:
     print("Preparing to write transformed data to the my sql...")
     
     db = mysql.connector.connect(
