@@ -1,5 +1,6 @@
 def transfrom_data(data_list):
     transformed = []
+    print("Starting data transformation...")
 
     for item in data_list:
         price_str = item["price"].replace("Â£", "£").replace("£", "").strip()
@@ -21,4 +22,5 @@ def transfrom_data(data_list):
             "price": price_value
         })
 
+    print("Transfrom data success")
     return transformed

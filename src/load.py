@@ -1,7 +1,8 @@
 import mysql.connector
 
 def load_data(data):
-
+    print("Preparing to write transformed data to the my sql...")
+    
     db = mysql.connector.connect(
         host="localhost",
         user="root",
@@ -60,6 +61,6 @@ def load_data(data):
     print(f"{cursor.rowcount} rows inserted.")
 
     cursor.execute("SELECT * FROM book_data")
-    print(cursor.fetchall())
+    # print(cursor.fetchall())
 
     db.close()
