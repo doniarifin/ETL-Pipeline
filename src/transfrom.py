@@ -1,4 +1,4 @@
-def transfrom_data(data_list):
+def transfrom_data(data_list) -> None:
     transformed = []
     print("Starting data transformation...")
 

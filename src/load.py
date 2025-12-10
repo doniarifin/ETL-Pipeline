@@ -1,6 +1,6 @@
 import mysql.connector
 
-def load_data(data):
+def load_data(data, var: dict[str][str]) -> None:
     print("Preparing to write transformed data to the my sql...")
     
     db = mysql.connector.connect(
@@ -20,10 +20,10 @@ def load_data(data):
 
     # reconnect to new db
     db = mysql.connector.connect(
-        host="localhost",
-        user="root",
-        passwd="root",
-        database="book",
+        host=var["host"],
+        user=var["user"],
+        passwd=var["password"],
+        database=var["db_name"],
         ssl_disabled=True
     )
     cursor = db.cursor()
